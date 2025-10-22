@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right top, #df8aba, #86a8e7, #7fe0da);
+}
+
+@media (max-width: 480px) {
+  #card {
+    /* Make the card take up most of the screen width, with some margin */
+    width: 90%;
+    max-width: 300px; /* Prevents it from looking too wide on slightly larger phones */
+    padding: 20px;
+  }
+
+  #card img {
+    height: 280px;
+  }
+
+  #card h1 {
+    font-size: 24px;
+  }
+
+  #card h5 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  #card button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+#card {
+  border-radius: 10px;
+  height: 450px;
+  width: 325px;
+
+  padding: 30px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#card img {
+  height: 55%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+#card h1 {
+  font-size: 28px;
+  margin: 15px 0 5px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#card h5 {
+  font-size: 25px;
+  font-weight: 500;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+#card button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+#card button:hover {
+  transform: translateY(-2px); /* lift on hover on upside */
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+h6 {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+h6 span:hover {
+  color: crimson;
+  cursor: pointer;
+}
