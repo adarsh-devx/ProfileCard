@@ -1,22 +1,19 @@
-let h5 = document.querySelector("h5");
+let statusText = document.querySelector(".card-subtitle");
+let btn = document.querySelector("#add");
 
-let addFriend = document.querySelector("#add");
+btn.addEventListener("click", () => {
+  
+  btn.classList.toggle("following");
 
-let flag = 0
+  if(btn.classList.contains("following")){
+    statusText.innerHTML = "Friends";
+    statusText.style.color = "green";
+    btn.innerHTML = "Unfollow";
+  } 
+  else {
+    statusText.innerHTML = "Stranger";
+    statusText.style.color = "#ff4d4d";
+    btn.innerHTML = "Follow";
+  }
 
-addFriend.addEventListener("click", function () {
-    if (flag == 0){
-
-        h5.innerHTML = "Friends";
-        h5.style.color = "green";
-        flag = 1
-        addFriend.innerHTML =  "Unfollow"
-    }
-    else {
-        h5.innerHTML = "Stranger";
-        h5.style.color = "red";
-        flag = 0
-        addFriend.innerHTML =  "Follow"
-    }
 });
-
